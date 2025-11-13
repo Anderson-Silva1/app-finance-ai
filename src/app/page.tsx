@@ -1,65 +1,125 @@
-import Image from "next/image";
+import HeroSection from "@/components/template/hero";
+import {
+  EyeOffIcon,
+  LandmarkIcon,
+  LockIcon,
+  ShieldCheckIcon,
+} from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen">
+      <HeroSection />
+
+      <section className="bg-[#F9FAFB] px-6 py-24 md:px-12 lg:px-20">
+        <div className="mx-auto max-w-7xl">
+          {/* Grid Principal: Texto à Esquerda | Cards à Direita */}
+          <div className="mb-24 grid grid-cols-1 items-start gap-16 lg:grid-cols-2">
+            {/* LADO ESQUERDO: O Manifesto */}
+            <div className="max-w-lg">
+              <span className="text-primary mb-4 block text-sm font-bold tracking-wider uppercase">
+                Segurança em primeiro lugar
+              </span>
+              <h2 className="mb-6 text-4xl leading-tight font-extrabold text-gray-900 md:text-5xl">
+                Nascemos para <span className="text-primary">proteger</span> o
+                seu patrimônio.
+              </h2>
+              <p className="text-lg leading-relaxed text-gray-600">
+                Enquanto outros apps vendem seus dados, nós usamos criptografia
+                de ponta a ponta. O <strong>Finane AI</strong> foi construído
+                com os mesmos protocolos de segurança dos maiores bancos
+                globais. Sua privacidade é inegociável para nós.
+              </p>
+            </div>
+
+            {/* LADO DIREITO: A Tecnologia e os Cards */}
+            <div className="flex flex-col gap-8">
+              {/* Cabeçalho do Lado Direito (Open Finance) */}
+              <div className="mb-4 flex items-center gap-4">
+                <div className="rounded-lg bg-purple-100 p-3">
+                  <LandmarkIcon className="text-primary h-8 w-8" />
+                </div>
+                <p className="max-w-xs text-sm text-gray-600">
+                  Operamos com integração oficial via{" "}
+                  <strong>Open Finance</strong>, garantindo a leitura segura dos
+                  dados sem acesso a movimentações.
+                </p>
+              </div>
+
+              {/* Os 3 Cards Cinzas */}
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+                {/* Card 1 */}
+                <div className="flex flex-col items-center rounded-xl bg-gray-200/70 p-6 text-center transition-colors duration-300 hover:bg-purple-50">
+                  <LockIcon className="text-primary mb-4 h-8 w-8" />
+                  <h3 className="mb-2 text-sm font-bold text-gray-800">
+                    Criptografia Militar
+                  </h3>
+                  <p className="text-xs text-gray-500">
+                    Padrão AES-256 de ponta a ponta
+                  </p>
+                </div>
+
+                {/* Card 2 */}
+                <div className="flex flex-col items-center rounded-xl bg-gray-200/70 p-6 text-center transition-colors duration-300 hover:bg-purple-50">
+                  <ShieldCheckIcon className="text-primary mb-4 h-8 w-8" />
+                  <h3 className="mb-2 text-sm font-bold text-gray-800">
+                    LGPD Compliant
+                  </h3>
+                  <p className="text-xs text-gray-500">
+                    Conformidade total com a lei de dados
+                  </p>
+                </div>
+
+                {/* Card 3 */}
+                <div className="flex flex-col items-center rounded-xl bg-gray-200/70 p-6 text-center transition-colors duration-300 hover:bg-purple-50">
+                  <EyeOffIcon className="text-primary mb-4 h-8 w-8" />
+                  <h3 className="mb-2 text-sm font-bold text-gray-800">
+                    Dados Anônimos
+                  </h3>
+                  <p className="text-xs text-gray-500">
+                    Seus dados são invisíveis para nossa equipe
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* FAIXA DE LOGOS (Rodapé da seção) */}
+          <div className="border-t border-gray-200 pt-12">
+            <p className="mb-8 text-center text-sm font-medium tracking-widest text-gray-400 uppercase">
+              Conectamos com as principais instituições
+            </p>
+
+            {/* Grid de Logos (Substitua os textos por <img src="logo.svg" />) */}
+            <div className="flex flex-wrap items-center justify-center gap-8 opacity-50 grayscale transition-all duration-500 hover:grayscale-0 md:justify-between">
+              <span className="font-sans text-2xl font-bold text-gray-800">
+                nubank
+              </span>
+              <span className="font-serif text-2xl font-bold text-gray-800 italic">
+                Itaú
+              </span>
+              <span className="font-sans text-2xl font-bold tracking-tighter text-gray-800">
+                bradesco
+              </span>
+              <span className="font-mono text-2xl font-bold text-gray-800">
+                inter
+              </span>
+              <span className="font-sans text-2xl font-bold text-gray-800">
+                XP<span className="font-light">inc.</span>
+              </span>
+              <span className="font-serif text-2xl font-bold text-gray-800">
+                Santander
+              </span>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+
+      <section>Nossos principais recursos</section>
+      <section>FEEDBACK DOS CLIENTES</section>
+      <section>PLANOS</section>
+      <section>BLOG</section>
+      <section>FAQ</section>
+    </main>
   );
 }
