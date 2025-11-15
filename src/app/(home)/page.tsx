@@ -1,4 +1,4 @@
-import HeroSection from "@/components/template/hero";
+import HeroSection from "@/components/home/template/hero";
 import {
   EyeOffIcon,
   LandmarkIcon,

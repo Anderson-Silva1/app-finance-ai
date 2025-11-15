@@ -3,15 +3,15 @@ export interface TransactionModel {
   title: string;
   description?: string;
   centsAmount: number; // Valor em centavos
-  category: CategoryCategory;
+  category: TransactionCategory;
   type: TransactionType;
   createdAt: string;
   updatedAt: string;
-  status: Status;
+  status: TransactionStatus;
   paymentMethod: TransactionPaymentMethod;
 }
 
-export type Status = "pending" | "completed" | "cancelled";
+export type TransactionStatus = "pending" | "completed" | "cancelled";
 
 export type TransactionPaymentMethod =
   | "credit_card"
@@ -25,7 +25,7 @@ export type TransactionPaymentMethod =
 
 export type TransactionType = "revenue" | "expense";
 
-export type CategoryCategory =
+export type TransactionCategory =
   // Receitas
   | "salary"
   | "freelance"

@@ -93,15 +93,11 @@
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
 
-
   --primary: #4169E1;
-
 
   --primary-foreground: oklch(0.205 0 0);
 
-
   --color-secondary: #0ea5e9; /* Azul suave (accent opcional) */
-
 
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
@@ -132,6 +128,15 @@
 @layer base {
   * {
     @apply border-border outline-ring/50 font-montserrat;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;

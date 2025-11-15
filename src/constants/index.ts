@@ -1,7 +1,7 @@
 import {
-  CategoryCategory,
-  Status,
+  TransactionCategory,
   TransactionPaymentMethod,
+  TransactionStatus,
   TransactionType,
 } from "@/model/transaction";
 
@@ -16,13 +16,13 @@ export const PAYMENT_METHOD_LABELS: Record<TransactionPaymentMethod, string> = {
   other: "Outros",
 };
 
-export const STATUS_LABELS: Record<Status, string> = {
+export const STATUS_LABELS: Record<TransactionStatus, string> = {
   pending: "Pendente",
   completed: "Efetivado", // ou "Pago" / "Recebido" dependendo do contexto
   cancelled: "Cancelado",
 };
 
-export const CATEGORY_LABELS: Record<CategoryCategory, string> = {
+export const CATEGORY_LABELS: Record<TransactionCategory, string> = {
   // Receitas
   salary: "Salário",
   freelance: "Freelance / Extra",
