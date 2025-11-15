@@ -1,3 +1,5 @@
+import { ModeToggle } from "../toggle-theme";
+
 export const Header = () => {
   return (
     <header className="mx-auto flex max-w-7xl items-center justify-between px-6 py-8">
@@ -13,7 +15,7 @@ export const Header = () => {
           <li>teste</li>
         </ul>
       </nav>
-      <div>hamburguer</div>
+      <ModeToggle />
     </header>
   );
 };
