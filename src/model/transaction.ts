@@ -11,7 +11,7 @@ export interface TransactionModel {
   paymentMethod: TransactionPaymentMethod;
 }
 
-export type TransactionStatus = "pending" | "completed" | "cancelled";
+export type TransactionStatus = "pending" | "completed";
 
 export type TransactionPaymentMethod =
   | "credit_card"

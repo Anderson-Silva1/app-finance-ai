@@ -13,7 +13,7 @@ export default function RootLayout({
       <SidebarProvider>
         <AppSidebar />
         <main className="w-full">
-          <SidebarTrigger className="absolute m-2 p-6" />
+          <SidebarTrigger className="fixed m-2 p-6" />
           <div>
             <Header />
             {children}

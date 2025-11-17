@@ -19,7 +19,6 @@ export const PAYMENT_METHOD_LABELS: Record<TransactionPaymentMethod, string> = {
 export const STATUS_LABELS: Record<TransactionStatus, string> = {
   pending: "Pendente",
   completed: "Efetivado", // ou "Pago" / "Recebido" dependendo do contexto
-  cancelled: "Cancelado",
 };
 
 export const CATEGORY_LABELS: Record<TransactionCategory, string> = {

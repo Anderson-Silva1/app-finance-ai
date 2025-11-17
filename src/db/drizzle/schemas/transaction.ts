@@ -4,7 +4,7 @@ import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 
 // Definição dos valores permitidos
 export const TRANSACTION_TYPES = ["revenue", "expense"] as const;
-export const STATUSES = ["pending", "completed", "cancelled"] as const;
+export const STATUSES = ["pending", "completed"] as const;
 export const PAYMENT_METHODS = [
   "credit_card",
   "debit_card",
