@@ -30,6 +30,9 @@ export const createTransactionAction = async (
   const paymentMethod =
     (formData.get("paymentMethod") as TransactionPaymentMethod) || "pix";
 
+
+    console.log(prevState);
+
   console.log({
     id,
     title,
